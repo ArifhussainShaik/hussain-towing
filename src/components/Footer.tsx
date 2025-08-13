@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">
-              Hussain <span className="text-primary">Towing</span>
+              Hussain <span className="text-primary">Towing Services</span>
             </h3>
             <p className="text-industrial-foreground/80 mb-6 max-w-md">
               Nandyal's most trusted towing service, providing reliable 24/7 emergency 

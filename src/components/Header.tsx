@@ -7,18 +7,24 @@ const Header = () => {
       <div className="container flex h-16 items-center justify-between px-4 mx-auto max-w-7xl">
         <div className="flex items-center space-x-2">
           <h1 className="text-2xl font-bold text-foreground">
-            Hussain <span className="text-primary">Towing</span>
+            Hussain <span className="text-primary">Towing Services</span>
           </h1>
         </div>
         
         <nav className="hidden md:flex items-center space-x-6">
-          <a href="#services" className="text-foreground hover:text-primary transition-colors">
+          <a href="/services" className="text-foreground hover:text-primary transition-colors">
             Services
           </a>
-          <a href="#about" className="text-foreground hover:text-primary transition-colors">
+          <a href="/about" className="text-foreground hover:text-primary transition-colors">
             About
           </a>
-          <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+          <a href="/locations" className="text-foreground hover:text-primary transition-colors">
+            Locations
+          </a>
+          <a href="/blog" className="text-foreground hover:text-primary transition-colors">
+            Blog
+          </a>
+          <a href="/contact" className="text-foreground hover:text-primary transition-colors">
             Contact
           </a>
         </nav>
