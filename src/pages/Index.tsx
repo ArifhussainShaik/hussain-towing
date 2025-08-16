@@ -9,6 +9,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import ServiceAreas from "@/components/ServiceAreas";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const Index = () => {
   return (
