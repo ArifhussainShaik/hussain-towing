@@ -22,6 +22,13 @@ import LocationTirupati from "./pages/locations/Tirupati";
 import LocationBangalore from "./pages/locations/Bangalore";
 import LocationKadapa from "./pages/locations/Kadapa";
 import LocationOngole from "./pages/locations/Ongole";
+import LightVehicleTowing from "./pages/services/LightVehicleTowing";
+import HeavyVehicleTowing from "./pages/services/HeavyVehicleTowing";
+import AccidentRecovery from "./pages/services/AccidentRecovery";
+import BatteryJumpstart from "./pages/services/BatteryJumpstart";
+import FuelDelivery from "./pages/services/FuelDelivery";
+import BreakdownNH44 from "./pages/blog/BreakdownNH44";
+import TowingCostsAP from "./pages/blog/TowingCostsAP";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,6 +59,13 @@ const App = () => (
           <Route path="/locations/bangalore" element={<LocationBangalore />} />
           <Route path="/locations/kadapa" element={<LocationKadapa />} />
           <Route path="/locations/ongole" element={<LocationOngole />} />
+          <Route path="/light-vehicle-towing" element={<LightVehicleTowing />} />
+          <Route path="/heavy-vehicle-towing" element={<HeavyVehicleTowing />} />
+          <Route path="/accident-recovery" element={<AccidentRecovery />} />
+          <Route path="/battery-jumpstart" element={<BatteryJumpstart />} />
+          <Route path="/fuel-delivery" element={<FuelDelivery />} />
+          <Route path="/blog/breakdown-nh44-safety-guide" element={<BreakdownNH44 />} />
+          <Route path="/blog/towing-costs-andhra-pradesh-guide" element={<TowingCostsAP />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
