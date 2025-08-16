@@ -23,14 +23,14 @@ const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Nandyal's Most
+            24/7 Emergency Towing Service
             <br />
-            <span className="text-primary">Trusted Towing</span>
+            in <span className="text-primary">Nandyal, Andhra Pradesh</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-            Fast, safe, and professional towing services across a 250 km radius. 
-            From light-duty cars to heavy equipment – we've got you covered.
+            Professional car breakdown service covering 300km radius across Andhra Pradesh. 
+            Fast emergency roadside assistance - from battery jumpstart to heavy vehicle recovery.
           </p>
           
           {/* Coverage Area */}
@@ -57,7 +57,7 @@ const Hero = () => {
               <div className="text-sm">Emergency Response</div>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-lg p-4">
-              <div className="text-3xl font-bold text-primary">250km</div>
+              <div className="text-3xl font-bold text-primary">300km</div>
               <div className="text-sm">Service Radius</div>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-lg p-4">

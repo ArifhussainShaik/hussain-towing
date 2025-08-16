@@ -10,6 +10,9 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Locations from "./pages/Locations";
+import TowingRates from "./pages/TowingRates";
+import NH44Towing from "./pages/NH44Towing";
+import EmergencyTowing from "./pages/EmergencyTowing";
 import LocationHyderabad from "./pages/locations/Hyderabad";
 import LocationKurnool from "./pages/locations/Kurnool";
 import LocationGuntur from "./pages/locations/Guntur";
@@ -37,6 +40,9 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/locations" element={<Locations />} />
+          <Route path="/towing-rates-andhra-pradesh" element={<TowingRates />} />
+          <Route path="/nh44-highway-towing" element={<NH44Towing />} />
+          <Route path="/24-hour-emergency-towing" element={<EmergencyTowing />} />
           <Route path="/locations/hyderabad" element={<LocationHyderabad />} />
           <Route path="/locations/kurnool" element={<LocationKurnool />} />
           <Route path="/locations/guntur" element={<LocationGuntur />} />

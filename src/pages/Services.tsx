@@ -12,9 +12,9 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Towing Services - Hussain Towing Services Nandyal</title>
-        <meta name="description" content="Comprehensive towing services in Nandyal - 24/7 emergency towing, car recovery, heavy equipment transport, roadside assistance. Serving 300km radius including Hyderabad, Kurnool, Guntur." />
-        <meta name="keywords" content="towing services Nandyal, car towing, heavy equipment towing, emergency recovery, roadside assistance, vehicle transport" />
+        <title>Car Towing Service, Heavy Vehicle Recovery, Battery Jumpstart - Hussain Towing Services</title>
+        <meta name="description" content="Professional car towing service, heavy vehicle recovery, accident vehicle removal, battery jumpstart service in Andhra Pradesh. 24/7 emergency roadside assistance covering 300km radius." />
+        <meta name="keywords" content="car towing service, heavy vehicle recovery, accident vehicle removal, battery jumpstart service, fuel delivery, emergency roadside assistance" />
         <link rel="canonical" href="https://hussaintowing.com/services" />
         <script type="application/ld+json">
           {JSON.stringify({
