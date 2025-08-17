@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,23 +11,25 @@ const Blog = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "Essential Emergency Kit Items Every Driver Should Carry",
-      excerpt: "Be prepared for roadside emergencies with these must-have items in your vehicle emergency kit.",
-      category: "Safety Tips",
+      title: "What to Do When Your Car Breaks Down on NH44",
+      excerpt: "Complete safety guide for car breakdowns on NH44 highway. Step-by-step emergency procedures and safety tips.",
+      category: "Highway Safety",
       date: "2024-01-15",
-      readTime: "5 min read",
+      readTime: "7 min read",
       author: "Hussain Towing Team",
-      slug: "emergency-kit-essentials"
+      slug: "/blog/breakdown-nh44-safety-guide",
+      link: "/blog/breakdown-nh44-safety-guide"
     },
     {
       id: 2,
-      title: "What to Do When Your Car Breaks Down on NH40",
-      excerpt: "Step-by-step guide to staying safe when your vehicle breaks down on major highways in Andhra Pradesh.",
-      category: "Highway Safety",
+      title: "Towing Service Costs in Andhra Pradesh - Complete Guide 2024",
+      excerpt: "Complete guide to towing service costs in Andhra Pradesh. Compare rates, understand pricing factors, and get transparent quotes.",
+      category: "Towing Guide",
       date: "2024-01-10",
-      readTime: "7 min read",
+      readTime: "9 min read",
       author: "Hussain Towing Team",
-      slug: "highway-breakdown-safety"
+      slug: "/blog/towing-costs-andhra-pradesh-guide",
+      link: "/blog/towing-costs-andhra-pradesh-guide"
     },
     {
       id: 3,
@@ -36,7 +39,8 @@ const Blog = () => {
       date: "2024-01-05",
       readTime: "6 min read",
       author: "Hussain Towing Team",
-      slug: "common-breakdown-causes"
+      slug: "common-breakdown-causes",
+      link: "#"
     },
     {
       id: 4,
@@ -46,7 +50,8 @@ const Blog = () => {
       date: "2023-12-28",
       readTime: "8 min read",
       author: "Hussain Towing Team",
-      slug: "monsoon-driving-safety"
+      slug: "monsoon-driving-safety",
+      link: "#"
     },
     {
       id: 5,
@@ -56,7 +61,8 @@ const Blog = () => {
       date: "2023-12-20",
       readTime: "5 min read",
       author: "Hussain Towing Team",
-      slug: "choose-reliable-towing"
+      slug: "choose-reliable-towing",
+      link: "#"
     },
     {
       id: 6,
@@ -66,7 +72,8 @@ const Blog = () => {
       date: "2023-12-15",
       readTime: "9 min read",
       author: "Hussain Towing Team",
-      slug: "towing-regulations-ap"
+      slug: "towing-regulations-ap",
+      link: "#"
     }
   ];
 
@@ -102,7 +109,7 @@ const Blog = () => {
         <section className="bg-gradient-hero text-white py-20">
           <div className="container mx-auto px-4 max-w-7xl text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Towing & Safety <span className="text-primary">Blog</span>
+              Towing & Safety <span className="text-primary">Blog</span> 📰
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
               Expert advice, safety tips, and industry insights from Nandyal's most trusted towing professionals.
@@ -154,10 +161,12 @@ const Blog = () => {
                     </div>
                     <h3 className="text-2xl font-bold mb-4">{blogPosts[0].title}</h3>
                     <p className="text-muted-foreground mb-6">{blogPosts[0].excerpt}</p>
-                    <Button variant="outline">
-                      Read Full Article
-                      <ArrowRight className="h-4 w-4 ml-2" />
-                    </Button>
+                    <Link to={blogPosts[0].link}>
+                      <Button variant="outline" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                        📖 Read Full Article
+                        <ArrowRight className="h-4 w-4 ml-2" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </Card>
@@ -166,33 +175,35 @@ const Blog = () => {
             {/* Blog Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.slice(1).map((post) => (
-                <Card key={post.id} className="hover:shadow-lg transition-shadow cursor-pointer">
-                  <div className="bg-muted h-48 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-4xl text-primary mb-2">📝</div>
-                      <p className="text-sm text-muted-foreground">{post.category}</p>
-                    </div>
-                  </div>
-                  <CardHeader>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Badge variant="outline" className="text-xs">{post.category}</Badge>
-                    </div>
-                    <CardTitle className="text-lg leading-tight">{post.title}</CardTitle>
-                    <CardDescription>{post.excerpt}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-center justify-between text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
-                        {new Date(post.date).toLocaleDateString()}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
-                        {post.readTime}
+                <Link key={post.id} to={post.link || "#"} className="block">
+                  <Card className="hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer h-full border-2 hover:border-primary">
+                    <div className="bg-muted h-48 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="text-4xl text-primary mb-2">📝</div>
+                        <p className="text-sm text-muted-foreground">{post.category}</p>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                    <CardHeader>
+                      <div className="flex items-center gap-2 mb-2">
+                        <Badge variant="outline" className="text-xs">{post.category}</Badge>
+                      </div>
+                      <CardTitle className="text-lg leading-tight">{post.title}</CardTitle>
+                      <CardDescription>{post.excerpt}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="flex items-center justify-between text-sm text-muted-foreground">
+                        <div className="flex items-center gap-1">
+                          <Calendar className="h-4 w-4" />
+                          {new Date(post.date).toLocaleDateString()}
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="h-4 w-4" />
+                          {post.readTime}
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
 

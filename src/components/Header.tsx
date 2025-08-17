@@ -1,32 +1,36 @@
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { Phone, Truck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b border-border">
-      <div className="container flex h-16 items-center justify-between px-4 mx-auto max-w-7xl">
-        <div className="flex items-center space-x-2">
-          <h1 className="text-2xl font-bold text-foreground">
+      <div className="container flex h-20 items-center justify-between px-4 mx-auto max-w-7xl">
+        <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity group">
+          <div className="bg-primary p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
+            <Truck className="h-8 w-8 text-white" />
+          </div>
+          <h1 className="text-3xl font-bold text-foreground">
             Hussain <span className="text-primary">Towing Services</span>
           </h1>
-        </div>
+        </Link>
         
         <nav className="hidden md:flex items-center space-x-6">
-          <a href="/services" className="text-foreground hover:text-primary transition-colors">
+          <Link to="/services" className="text-foreground hover:text-primary transition-colors">
             Services
-          </a>
-          <a href="/about" className="text-foreground hover:text-primary transition-colors">
+          </Link>
+          <Link to="/about" className="text-foreground hover:text-primary transition-colors">
             About
-          </a>
-          <a href="/locations" className="text-foreground hover:text-primary transition-colors">
+          </Link>
+          <Link to="/locations" className="text-foreground hover:text-primary transition-colors">
             Locations
-          </a>
-          <a href="/blog" className="text-foreground hover:text-primary transition-colors">
+          </Link>
+          <Link to="/blog" className="text-foreground hover:text-primary transition-colors">
             Blog
-          </a>
-          <a href="/contact" className="text-foreground hover:text-primary transition-colors">
+          </Link>
+          <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
             Contact
-          </a>
+          </Link>
         </nav>
 
         <div className="flex items-center space-x-4">
