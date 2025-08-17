@@ -6,12 +6,12 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
-      </div>
+      <img
+        src={heroImage}
+        alt="Hussain Towing Services truck providing 24/7 emergency roadside assistance in Nandyal"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 max-w-7xl">

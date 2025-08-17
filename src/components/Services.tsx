@@ -12,6 +12,7 @@ const Services = () => {
       title: "Light-Duty Towing",
       description: "Cars, motorcycles, and small vehicles. Fast and safe transport to your destination.",
       image: carTowingImage,
+      altText: "A sedan being carefully loaded onto a flatbed tow truck in Nandyal.",
       features: ["Flatbed & wheel-lift towing", "No damage guarantee", "Insurance approved"]
     },
     {
@@ -19,6 +20,7 @@ const Services = () => {
       title: "Emergency Recovery",
       description: "24/7 accident recovery and roadside assistance when you need it most.",
       image: emergencyImage,
+      altText: "Emergency recovery team attending to a vehicle accident scene at night.",
       features: ["24/7 availability", "Rapid response", "Professional cleanup"]
     },
     {
@@ -26,6 +28,7 @@ const Services = () => {
       title: "Heavy Equipment",
       description: "Construction equipment, large trucks, and commercial vehicle transport.",
       image: heavyDutyImage,
+      altText: "A large construction vehicle being towed by a heavy-duty tow truck.",
       features: ["Heavy-duty capability", "Specialized equipment", "Commercial rates"]
     },
     {
@@ -33,6 +36,7 @@ const Services = () => {
       title: "Long-Haul Transport",
       description: "Safe transport across the 250km service area and beyond.",
       image: carTowingImage,
+      altText: "A car securely fastened on a tow truck for long-distance transport.",
       features: ["Long-distance towing", "Secure transport", "Competitive pricing"]
     }
   ];
@@ -54,7 +58,7 @@ const Services = () => {
               <div className="relative overflow-hidden rounded-t-lg">
                 <img 
                   src={service.image} 
-                  alt={service.title}
+                  alt={service.altText}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

@@ -1,19 +1,42 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, AlertTriangle, Clock, Shield, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const BreakdownNH44 = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What to Do When Your Car Breaks Down on NH44 - Emergency Guide",
+    "description": "Complete safety guide for car breakdowns on NH44 highway. Step-by-step emergency procedures, safety tips, and how to get help on Andhra Pradesh highways.",
+    "image": "https://hussaintowing.com/hero-towing.jpg", // Replace with a relevant blog post image
+    "author": {
+      "@type": "Organization",
+      "name": "Hussain Towing Services"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hussain Towing Services",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://hussaintowing.com/logo.png" // Replace with your logo URL
+      }
+    },
+    "datePublished": "2024-01-15"
+  };
+
   return (
     <>
-      <Helmet>
-        <title>What to Do When Your Car Breaks Down on NH44 - Emergency Guide</title>
-        <meta name="description" content="Complete safety guide for car breakdowns on NH44 highway. Step-by-step emergency procedures, safety tips, and how to get help on Andhra Pradesh highways." />
-        <meta name="keywords" content="NH44 breakdown, highway emergency, car breakdown safety, NH44 towing, highway assistance, emergency contacts AP" />
-        <link rel="canonical" href="https://hussaintowing.com/blog/breakdown-nh44-safety-guide" />
-      </Helmet>
+      <SEOHead
+        title="What to Do When Your Car Breaks Down on NH44 - Emergency Guide"
+        description="Complete safety guide for car breakdowns on NH44 highway. Step-step emergency procedures, safety tips, and how to get help on Andhra Pradesh highways."
+        keywords="NH44 breakdown, highway emergency, car breakdown safety, NH44 towing, highway assistance, emergency contacts AP"
+        canonical="https://hussaintowing.com/blog/breakdown-nh44-safety-guide"
+        structuredData={structuredData}
+      />
       
       <div className="min-h-screen">
         <Header />
@@ -40,7 +63,7 @@ const BreakdownNH44 = () => {
                   <h2 className="text-xl font-bold m-0">Emergency First - Call for Help</h2>
                 </div>
                 <p className="m-0">
-                  <strong>Before reading this guide, if you're currently stranded:</strong> Call Hussain Towing at +91 98765 43210 for immediate assistance on NH44.
+                  <strong>Before reading this guide, if you're currently stranded:</strong> Call Hussain Towing at +91 98765 43210 for immediate assistance on NH44. For more contact options, see our <Link to="/contact" className="text-primary underline">Contact Page</Link>.
                 </p>
               </div>
 

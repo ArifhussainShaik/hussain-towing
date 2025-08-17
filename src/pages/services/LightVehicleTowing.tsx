@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -6,29 +6,29 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Car, Clock, Shield, MapPin, Star } from "lucide-react";
 
 const LightVehicleTowing = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Light Vehicle Towing Service",
+    "description": "Professional car and light vehicle towing services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Hussain Towing Services",
+      "telephone": "+91 98765 43210"
+    },
+    "serviceType": "Towing Service",
+    "areaServed": "Andhra Pradesh"
+  };
+
   return (
     <>
-      <Helmet>
-        <title>Light Vehicle Towing Service - Car Towing in Nandyal | Hussain Towing</title>
-        <meta name="description" content="Professional car towing service in Nandyal. Light vehicle recovery for cars, SUVs, and small vehicles. 24/7 emergency response across Andhra Pradesh. Call +91 98765 43210." />
-        <meta name="keywords" content="car towing service, light vehicle towing, small vehicle recovery, car breakdown service, SUV towing, emergency car towing Nandyal" />
-        <link rel="canonical" href="https://hussaintowing.com/light-vehicle-towing" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Light Vehicle Towing Service",
-            "description": "Professional car and light vehicle towing services",
-            "provider": {
-              "@type": "Organization",
-              "name": "Hussain Towing Services",
-              "telephone": "+91 98765 43210"
-            },
-            "serviceType": "Towing Service",
-            "areaServed": "Andhra Pradesh"
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="Light Vehicle Towing Service - Car Towing in Nandyal | Hussain Towing"
+        description="Professional car towing service in Nandyal. Light vehicle recovery for cars, SUVs, and small vehicles. 24/7 emergency response across Andhra Pradesh. Call +91 98765 43210."
+        keywords="car towing service, light vehicle towing, small vehicle recovery, car breakdown service, SUV towing, emergency car towing Nandyal"
+        canonical="https://hussaintowing.com/light-vehicle-towing"
+        structuredData={structuredData}
+      />
       
       <div className="min-h-screen">
         <Header />

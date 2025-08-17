@@ -1,18 +1,43 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Route, Clock, AlertTriangle } from "lucide-react";
 
 const LocationHyderabad = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Hussain Towing Services in Hyderabad",
+    "description": "Professional 24/7 towing and roadside assistance services in Hyderabad and along the NH44 corridor.",
+    "telephone": "+91 98765 43210",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "addressCountry": "IN"
+    },
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "17.3850",
+        "longitude": "78.4867"
+      },
+      "geoRadius": "50000" // 50km radius around Hyderabad
+    },
+    "openingHours": "Mo-Su 00:00-23:59"
+  };
+
   return (
     <>
-      <Helmet>
-        <title>Towing Services Hyderabad - 24/7 Emergency Towing | Hussain Towing</title>
-        <meta name="description" content="Professional towing services from Nandyal to Hyderabad (286km). 24/7 emergency response, NH44 coverage, vehicle recovery. Call +91 98765 43210 for immediate assistance." />
-        <meta name="keywords" content="towing service Hyderabad, emergency towing NH44, Hyderabad to Nandyal towing, vehicle recovery Hyderabad" />
-        <link rel="canonical" href="https://hussaintowing.com/locations/hyderabad" />
-      </Helmet>
+      <SEOHead
+        title="Towing Services Hyderabad - 24/7 Emergency Towing | Hussain Towing"
+        description="Professional towing services from Nandyal to Hyderabad (286km). 24/7 emergency response, NH44 coverage, vehicle recovery. Call +91 98765 43210 for immediate assistance."
+        keywords="towing service Hyderabad, emergency towing NH44, Hyderabad to Nandyal towing, vehicle recovery Hyderabad"
+        canonical="https://hussaintowing.com/locations/hyderabad"
+        structuredData={structuredData}
+      />
       
       <div className="min-h-screen">
         <Header />
