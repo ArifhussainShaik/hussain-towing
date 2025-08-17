@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Car, Truck, AlertTriangle, Wrench } from "lucide-react";
-import carTowingImage from "@/assets/service-car-towing.jpg";
-import heavyDutyImage from "@/assets/service-heavy-duty.jpg";
-import emergencyImage from "@/assets/service-emergency.jpg";
+import carTowingImage from "@/assets/service-car-towing.webp";
+import heavyDutyImage from "@/assets/service-heavy-duty.webp";
+import emergencyImage from "@/assets/service-emergency.webp";
 
 const Services = () => {
   const services = [

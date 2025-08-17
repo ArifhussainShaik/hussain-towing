@@ -194,7 +194,7 @@ const Contact = () => {
 
                       <div>
                         <Label htmlFor="service">Service Needed</Label>
-                        <select className="w-full p-3 border border-input rounded-md bg-background">
+                        <select id="service" className="w-full p-3 border border-input rounded-md bg-background">
                           <option value="">Select a service</option>
                           <option value="emergency">Emergency Towing</option>
                           <option value="car-towing">Car Towing</option>

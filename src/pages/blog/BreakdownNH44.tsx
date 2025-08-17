@@ -3,14 +3,27 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, AlertTriangle, Clock, Shield, MapPin } from "lucide-react";
+import { Phone, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+  LinkedinShareButton,
+  FacebookIcon,
+  TwitterIcon,
+  WhatsappIcon,
+  LinkedinIcon,
+} from "react-share";
 
 const BreakdownNH44 = () => {
+  const shareUrl = "https://hussaintowing.com/blog/breakdown-nh44-safety-guide";
+  const title = "What to Do When Your Car Breaks Down on NH44 - Emergency Guide";
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "What to Do When Your Car Breaks Down on NH44 - Emergency Guide",
+    "headline": title,
     "description": "Complete safety guide for car breakdowns on NH44 highway. Step-by-step emergency procedures, safety tips, and how to get help on Andhra Pradesh highways.",
     "image": "https://hussaintowing.com/hero-towing.jpg", // Replace with a relevant blog post image
     "author": {
@@ -31,10 +44,10 @@ const BreakdownNH44 = () => {
   return (
     <>
       <SEOHead
-        title="What to Do When Your Car Breaks Down on NH44 - Emergency Guide"
-        description="Complete safety guide for car breakdowns on NH44 highway. Step-step emergency procedures, safety tips, and how to get help on Andhra Pradesh highways."
+        title={title}
+        description="Complete safety guide for car breakdowns on NH44 highway. Step-by-step emergency procedures, safety tips, and how to get help on Andhra Pradesh highways."
         keywords="NH44 breakdown, highway emergency, car breakdown safety, NH44 towing, highway assistance, emergency contacts AP"
-        canonical="https://hussaintowing.com/blog/breakdown-nh44-safety-guide"
+        canonical={shareUrl}
         structuredData={structuredData}
       />
       
@@ -234,6 +247,24 @@ const BreakdownNH44 = () => {
               <p>
                 Remember, NH44 is a critical transportation corridor with unique challenges. Professional towing services like Hussain Towing understand these challenges and are equipped to provide safe, efficient assistance when you need it most.
               </p>
+
+              <div className="mt-12 pt-8 border-t">
+                <h3 className="text-xl font-bold text-center mb-4">Share This Post</h3>
+                <div className="flex justify-center gap-4">
+                  <FacebookShareButton url={shareUrl} quote={title}>
+                    <FacebookIcon size={40} round />
+                  </FacebookShareButton>
+                  <TwitterShareButton url={shareUrl} title={title}>
+                    <TwitterIcon size={40} round />
+                  </TwitterShareButton>
+                  <WhatsappShareButton url={shareUrl} title={title} separator=":: ">
+                    <WhatsappIcon size={40} round />
+                  </WhatsappShareButton>
+                  <LinkedinShareButton url={shareUrl}>
+                    <LinkedinIcon size={40} round />
+                  </LinkedinShareButton>
+                </div>
+              </div>
             </div>
           </div>
         </article>
@@ -243,5 +274,6 @@ const BreakdownNH44 = () => {
     </>
   );
 };
+
 
 export default BreakdownNH44;
