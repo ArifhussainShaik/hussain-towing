@@ -49,10 +49,10 @@ const Contact = () => {
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
               Need emergency towing or have questions about our services? We're here to help 24/7.
             </p>
-            <div className="bg-emergency text-emergency-foreground px-6 py-4 rounded-lg inline-flex items-center gap-2 text-xl font-bold">
+            <a href="tel:+919876543210" className="bg-emergency text-emergency-foreground px-6 py-4 rounded-lg inline-flex items-center gap-2 text-xl font-bold hover:opacity-90 transition-opacity">
               <Phone className="h-6 w-6" />
               Emergency: +91 98765 43210
-            </div>
+            </a>
           </div>
         </section>
 
@@ -73,7 +73,9 @@ const Contact = () => {
                         24/7 Emergency Line
                       </CardTitle>
                       <CardDescription className="text-lg font-semibold">
-                        +91 98765 43210
+                        <a href="tel:+919876543210" className="hover:underline">
+                          +91 98765 43210
+                        </a>
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -218,7 +220,7 @@ const Contact = () => {
                       <div className="bg-muted p-4 rounded-lg">
                         <p className="text-sm text-muted-foreground">
                           <strong>Emergency situations:</strong> Please call our 24/7 emergency line at 
-                          <span className="font-semibold text-emergency"> +91 98765 43210</span> instead of using this form.
+                          <a href="tel:+919876543210" className="font-semibold text-emergency hover:underline">+91 98765 43210</a> instead of using this form.
                         </p>
                       </div>
 

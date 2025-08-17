@@ -109,10 +109,12 @@ const EmergencyTowing = () => {
               Instant response emergency towing service. 15-minute dispatch guarantee across Andhra Pradesh. Real person answers every call.
             </p>
             <div className="space-y-4">
-              <div className="text-4xl md:text-5xl font-bold text-yellow-300">+91 98765 43210</div>
-              <Button variant="secondary" size="lg" className="bg-yellow-400 text-red-900 hover:bg-yellow-300">
-                <Phone className="h-6 w-6 mr-2" />
-                Emergency Call Now
+              <a href="tel:+919876543210" className="text-4xl md:text-5xl font-bold text-yellow-300 hover:underline">+91 98765 43210</a>
+              <Button variant="secondary" size="lg" className="bg-yellow-400 text-red-900 hover:bg-yellow-300" asChild>
+                <a href="tel:+919876543210">
+                  <Phone className="h-6 w-6 mr-2" />
+                  Emergency Call Now
+                </a>
               </Button>
             </div>
           </div>
@@ -196,9 +198,11 @@ const EmergencyTowing = () => {
               </div>
             </div>
             
-            <Button variant="default" size="lg" className="bg-yellow-600 hover:bg-yellow-700 text-white">
-              <Phone className="h-5 w-5 mr-2" />
-              Test Our Response Time
+            <Button variant="default" size="lg" className="bg-yellow-600 hover:bg-yellow-700 text-white" asChild>
+              <a href="tel:+919876543210">
+                <Phone className="h-5 w-5 mr-2" />
+                Test Our Response Time
+              </a>
             </Button>
           </div>
         </section>

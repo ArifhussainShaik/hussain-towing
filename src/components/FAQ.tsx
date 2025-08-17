@@ -64,7 +64,7 @@ const FAQ = () => {
           <p className="text-muted-foreground mb-6">
             Call us directly for immediate answers about rates, coverage, or emergency assistance
           </p>
-          <div className="text-2xl font-bold text-primary">+91 98765 43210</div>
+          <a href="tel:+919876543210" className="text-2xl font-bold text-primary hover:underline">+91 98765 43210</a>
         </div>
       </div>
     </section>

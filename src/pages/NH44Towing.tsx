@@ -88,9 +88,11 @@ const NH44Towing = () => {
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
               24/7 emergency towing service on NH44 highway. Fast response for vehicle breakdowns on Hyderabad-Kurnool-Bangalore route.
             </p>
-            <Button variant="cta-hero" size="lg">
-              <Phone className="h-6 w-6 mr-2" />
-              Emergency: +91 98765 43210
+            <Button variant="cta-hero" size="lg" asChild>
+              <a href="tel:+919876543210">
+                <Phone className="h-6 w-6 mr-2" />
+                Emergency: +91 98765 43210
+              </a>
             </Button>
           </div>
         </section>

@@ -14,10 +14,10 @@ const Footer = () => {
               Nandyal's most trusted towing service, providing reliable 24/7 emergency 
               response and professional vehicle transport across a 250km radius.
             </p>
-            <div className="flex items-center gap-2 text-primary font-semibold text-lg">
+            <a href="tel:+919876543210" className="flex items-center gap-2 text-primary font-semibold text-lg hover:underline">
               <Phone className="h-5 w-5" />
               24/7 Emergency: +91 98765 43210
-            </div>
+            </a>
           </div>
 
           {/* Quick Links */}

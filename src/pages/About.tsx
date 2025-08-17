@@ -63,9 +63,11 @@ const About = () => {
                 <p className="text-lg text-muted-foreground mb-6">
                   We understand that vehicle breakdowns and accidents can happen at any time, which is why we've built our reputation on fast response times, professional service, and fair pricing. Our team operates 24/7, ensuring help is always just a phone call away.
                 </p>
-                <Button variant="cta-hero" size="lg">
-                  <Phone className="h-5 w-5 mr-2" />
-                  Call +91 98765 43210
+                <Button variant="cta-hero" size="lg" asChild>
+                  <a href="tel:+919876543210">
+                    <Phone className="h-5 w-5 mr-2" />
+                    Call +91 98765 43210
+                  </a>
                 </Button>
               </div>
               <div className="bg-muted rounded-lg p-8">

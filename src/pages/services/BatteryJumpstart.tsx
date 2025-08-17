@@ -44,9 +44,11 @@ const BatteryJumpstart = () => {
                   Fast battery jumpstart and replacement service across Nandyal. Get back on the road quickly with professional battery assistance.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button variant="cta-hero" size="lg">
-                    <Phone className="h-6 w-6 mr-2" />
-                    Call +91 98765 43210
+                  <Button variant="cta-hero" size="lg" asChild>
+                    <a href="tel:+919876543210">
+                      <Phone className="h-6 w-6 mr-2" />
+                      Call +91 98765 43210
+                    </a>
                   </Button>
                   <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
                     Emergency Battery Help

@@ -213,8 +213,8 @@ const Blog = () => {
               <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
                 Don't wait for a breakdown to find our number. Save our contact and get 24/7 emergency towing across Nandyal and 300km radius.
               </p>
-              <Button variant="cta-hero" size="lg">
-                <span className="text-lg font-semibold">Call +91 98765 43210</span>
+              <Button variant="cta-hero" size="lg" asChild>
+                <a href="tel:+919876543210" className="text-lg font-semibold">Call +91 98765 43210</a>
               </Button>
             </div>
           </div>

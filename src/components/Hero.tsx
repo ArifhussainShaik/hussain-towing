@@ -41,9 +41,11 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="cta-hero" size="lg" className="w-full sm:w-auto">
-              <Phone className="h-6 w-6 mr-2" />
-              Call +91 98765 43210
+            <Button variant="cta-hero" size="lg" className="w-full sm:w-auto" asChild>
+              <a href="tel:+919876543210">
+                <Phone className="h-6 w-6 mr-2" />
+                Call +91 98765 43210
+              </a>
             </Button>
             <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white text-white hover:bg-white hover:text-foreground">
               View Services

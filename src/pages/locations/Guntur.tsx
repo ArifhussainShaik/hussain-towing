@@ -25,9 +25,11 @@ const LocationGuntur = () => {
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
               Reliable towing from Nandyal to Guntur. NH16 coastal route coverage with professional service.
             </p>
-            <Button variant="cta-hero" size="lg">
-              <Phone className="h-6 w-6 mr-2" />
-              Call +91 98765 43210
+            <Button variant="cta-hero" size="lg" asChild>
+              <a href="tel:+919876543210">
+                <Phone className="h-6 w-6 mr-2" />
+                Call +91 98765 43210
+              </a>
             </Button>
           </div>
         </section>

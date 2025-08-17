@@ -44,9 +44,11 @@ const AccidentRecovery = () => {
                   Professional accident recovery and crash site cleanup. Insurance-approved service with proper documentation and safety protocols.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button variant="emergency" size="lg">
-                    <Phone className="h-6 w-6 mr-2" />
-                    Emergency: +91 98765 43210
+                  <Button variant="emergency" size="lg" asChild>
+                    <a href="tel:+919876543210">
+                      <Phone className="h-6 w-6 mr-2" />
+                      Emergency: +91 98765 43210
+                    </a>
                   </Button>
                   <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
                     Insurance Claims Help

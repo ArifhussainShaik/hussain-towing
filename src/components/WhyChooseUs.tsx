@@ -100,10 +100,12 @@ const WhyChooseUs = () => {
               </ul>
             </div>
             <div className="text-center lg:text-right">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-4">+91 98765 43210</div>
-              <Button variant="cta-hero" size="lg">
-                <Phone className="h-5 w-5 mr-2" />
-                Save Our Number Now
+              <a href="tel:+919876543210" className="text-4xl md:text-5xl font-bold text-primary mb-4 hover:underline">+91 98765 43210</a>
+              <Button variant="cta-hero" size="lg" asChild>
+                <a href="tel:+919876543210">
+                  <Phone className="h-5 w-5 mr-2" />
+                  Save Our Number Now
+                </a>
               </Button>
               <p className="text-sm text-muted-foreground mt-3">
                 Available 24/7 • Real person always answers
