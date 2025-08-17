@@ -1,57 +1,57 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, Car, Truck, Wrench, Clock, Shield, Users } from "lucide-react";
-import serviceCar from "@/assets/service-car-towing.jpg";
-import serviceHeavy from "@/assets/service-heavy-duty.jpg";
-import serviceEmergency from "@/assets/service-emergency.jpg";
+import serviceCar from "@/assets/service-car-towing.webp";
+import serviceHeavy from "@/assets/service-heavy-duty.webp";
+import serviceEmergency from "@/assets/service-emergency.webp";
 
 const Services = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Towing Services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Hussain Towing Services",
+      "telephone": "+91 98765 43210",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nandyal",
+        "addressRegion": "Andhra Pradesh",
+        "addressCountry": "IN"
+      }
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "24/7 Emergency Towing",
+        "description": "Round-the-clock emergency vehicle recovery and towing services"
+      },
+      {
+        "@type": "Offer", 
+        "name": "Light-Duty Car Towing",
+        "description": "Safe transport for cars, motorcycles, and light vehicles"
+      },
+      {
+        "@type": "Offer",
+        "name": "Heavy Equipment Towing", 
+        "description": "Specialized transport for heavy machinery and commercial vehicles"
+      }
+    ]
+  };
+
   return (
     <>
-      <Helmet>
-        <title>Car Towing Service, Heavy Vehicle Recovery, Battery Jumpstart - Hussain Towing Services</title>
-        <meta name="description" content="Professional car towing service, heavy vehicle recovery, accident vehicle removal, battery jumpstart service in Andhra Pradesh. 24/7 emergency roadside assistance covering 300km radius." />
-        <meta name="keywords" content="car towing service, heavy vehicle recovery, accident vehicle removal, battery jumpstart service, fuel delivery, emergency roadside assistance" />
-        <link rel="canonical" href="https://hussaintowing.com/services" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Towing Services",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Hussain Towing Services",
-              "telephone": "+91 98765 43210",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Nandyal",
-                "addressRegion": "Andhra Pradesh",
-                "addressCountry": "IN"
-              }
-            },
-            "offers": [
-              {
-                "@type": "Offer",
-                "name": "24/7 Emergency Towing",
-                "description": "Round-the-clock emergency vehicle recovery and towing services"
-              },
-              {
-                "@type": "Offer", 
-                "name": "Light-Duty Car Towing",
-                "description": "Safe transport for cars, motorcycles, and light vehicles"
-              },
-              {
-                "@type": "Offer",
-                "name": "Heavy Equipment Towing", 
-                "description": "Specialized transport for heavy machinery and commercial vehicles"
-              }
-            ]
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="Car Towing Service, Heavy Vehicle Recovery, Battery Jumpstart - Hussain Towing Services"
+        description="Professional car towing service, heavy vehicle recovery, accident vehicle removal, battery jumpstart service in Andhra Pradesh. 24/7 emergency roadside assistance covering 300km radius."
+        keywords="car towing service, heavy vehicle recovery, accident vehicle removal, battery jumpstart service, fuel delivery, emergency roadside assistance"
+        canonical="https://hussaintowing.com/services"
+        structuredData={structuredData}
+      />
       
       <div className="min-h-screen">
         <Header />
@@ -65,9 +65,11 @@ const Services = () => {
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
               From emergency roadside assistance to heavy equipment transport, we provide comprehensive towing solutions across Nandyal and 300km radius.
             </p>
-            <Button variant="cta-hero" size="lg" className="mr-4">
-              <Phone className="h-6 w-6 mr-2" />
-              Call +91 98765 43210
+            <Button variant="cta-hero" size="lg" asChild>
+              <a href="tel:+919876543210" className="flex items-center gap-2">
+                <Phone className="h-6 w-6 mr-2" />
+                Call +91 98765 43210
+              </a>
             </Button>
           </div>
         </section>
@@ -84,84 +86,84 @@ const Services = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {/* Light-Duty Towing */}
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${serviceCar})` }}>
-                  <div className="h-full bg-black/30 flex items-center justify-center">
-                    <Car className="h-12 w-12 text-white" />
-                  </div>
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+                <div className="relative h-48 w-full">
+                  <img src={serviceCar} alt="Light-duty car towing service" className="absolute inset-0 h-full w-full object-cover"/>
                 </div>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Car className="h-5 w-5 text-primary" />
-                    Light-Duty Towing
-                  </CardTitle>
-                  <CardDescription>
-                    Safe and secure towing for cars, motorcycles, and light commercial vehicles up to 3.5 tons.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground mb-4">
-                    <li>• Cars and SUVs</li>
-                    <li>• Motorcycles and scooters</li>
-                    <li>• Light commercial vehicles</li>
-                    <li>• Damage-free transport</li>
-                  </ul>
-                  <Button variant="outline" className="w-full">Learn More</Button>
-                </CardContent>
+                <div className="flex flex-col flex-grow">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Car className="h-5 w-5 text-primary" />
+                      Light-Duty Towing
+                    </CardTitle>
+                    <CardDescription>
+                      Safe and secure towing for cars, motorcycles, and light commercial vehicles up to 3.5 tons.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex-grow flex flex-col">
+                    <ul className="space-y-2 text-sm text-muted-foreground mb-4 flex-grow">
+                      <li>• Cars and SUVs</li>
+                      <li>• Motorcycles and scooters</li>
+                      <li>• Light commercial vehicles</li>
+                      <li>• Damage-free transport</li>
+                    </ul>
+                    <Button variant="outline" className="w-full">Learn More</Button>
+                  </CardContent>
+                </div>
               </Card>
 
               {/* Emergency Recovery */}
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${serviceEmergency})` }}>
-                  <div className="h-full bg-black/30 flex items-center justify-center">
-                    <Wrench className="h-12 w-12 text-white" />
-                  </div>
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+                <div className="relative h-48 w-full">
+                    <img src={serviceEmergency} alt="24/7 Emergency recovery service" className="absolute inset-0 h-full w-full object-cover"/>
                 </div>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Wrench className="h-5 w-5 text-primary" />
-                    Emergency Recovery
-                  </CardTitle>
-                  <CardDescription>
-                    24/7 emergency roadside assistance and accident recovery services across our service area.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground mb-4">
-                    <li>• Accident recovery</li>
-                    <li>• Off-road recovery</li>
-                    <li>• Jump starts & tire changes</li>
-                    <li>• Lockout assistance</li>
-                  </ul>
-                  <Button variant="outline" className="w-full">Learn More</Button>
-                </CardContent>
+                <div className="flex flex-col flex-grow">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Wrench className="h-5 w-5 text-primary" />
+                      Emergency Recovery
+                    </CardTitle>
+                    <CardDescription>
+                      24/7 emergency roadside assistance and accident recovery services across our service area.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex-grow flex flex-col">
+                    <ul className="space-y-2 text-sm text-muted-foreground mb-4 flex-grow">
+                      <li>• Accident recovery</li>
+                      <li>• Off-road recovery</li>
+                      <li>• Jump starts & tire changes</li>
+                      <li>• Lockout assistance</li>
+                    </ul>
+                    <Button variant="outline" className="w-full">Learn More</Button>
+                  </CardContent>
+                </div>
               </Card>
 
               {/* Heavy Equipment */}
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="h-48 bg-cover bg-center" style={{ backgroundImage: `url(${serviceHeavy})` }}>
-                  <div className="h-full bg-black/30 flex items-center justify-center">
-                    <Truck className="h-12 w-12 text-white" />
-                  </div>
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+                 <div className="relative h-48 w-full">
+                    <img src={serviceHeavy} alt="Heavy equipment towing service" className="absolute inset-0 h-full w-full object-cover"/>
                 </div>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Truck className="h-5 w-5 text-primary" />
-                    Heavy Equipment Towing
-                  </CardTitle>
-                  <CardDescription>
-                    Specialized transport for heavy machinery, construction equipment, and commercial vehicles.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground mb-4">
-                    <li>• Construction machinery</li>
-                    <li>• Commercial trucks</li>
-                    <li>• Agricultural equipment</li>
-                    <li>• Industrial machinery</li>
-                  </ul>
-                  <Button variant="outline" className="w-full">Learn More</Button>
-                </CardContent>
+                <div className="flex flex-col flex-grow">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Truck className="h-5 w-5 text-primary" />
+                      Heavy Equipment Towing
+                    </CardTitle>
+                    <CardDescription>
+                      Specialized transport for heavy machinery, construction equipment, and commercial vehicles.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex-grow flex flex-col">
+                    <ul className="space-y-2 text-sm text-muted-foreground mb-4 flex-grow">
+                      <li>• Construction machinery</li>
+                      <li>• Commercial trucks</li>
+                      <li>• Agricultural equipment</li>
+                      <li>• Industrial machinery</li>
+                    </ul>
+                    <Button variant="outline" className="w-full">Learn More</Button>
+                  </CardContent>
+                </div>
               </Card>
             </div>
 
